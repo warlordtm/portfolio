@@ -16,9 +16,9 @@ export default function NavBar() {
         </Link>
 
         <div className="flex items-center gap-6 text-gray-200 dark:text-gray-300">
-          <Link href="/projects" className="hover:text-pink-400">Projects</Link>
-          <Link href="/services" className="hover:text-pink-400">Services</Link>
-          <Link href="/contact" className="hover:text-pink-400">Contact</Link>
+          <Link href="/" className="hover:text-pink-400">Home</Link>
+          <Link href="/aboutme" className="hover:text-pink-400">About</Link>
+          <Link href="/blogs" className="hover:text-pink-400">Blog</Link>
           <DarkMode />
         </div>
       </div>

@@ -111,9 +111,9 @@ function NavBar() {
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                            href: "/services",
+                            href: "/aboutme",
                             className: "hover:text-pink-400",
-                            children: "Services"
+                            children: "About"
                         }, void 0, false, {
                             fileName: "[project]/src/components/NavBar.tsx",
                             lineNumber: 20,
@@ -172,71 +172,77 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$mo
 ;
 function ProjectCard(param) {
     let { project } = param;
-    if (!project) return null;
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
         whileHover: {
             y: -6
         },
-        className: "glass rounded-xl p-4 shadow-lg hover:shadow-cyan-500/40 transition",
+        className: "glass rounded-xl p-4 shadow-neon-md",
         children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+            project.image ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
                 src: project.image,
                 alt: project.title,
                 className: "rounded-md mb-3 w-full object-cover h-44"
             }, void 0, false, {
                 fileName: "[project]/src/components/ProjectCard.tsx",
-                lineNumber: 21,
-                columnNumber: 7
+                lineNumber: 20,
+                columnNumber: 9
+            }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "h-44 rounded-md mb-3 w-full flex items-center justify-center bg-gradient-to-br from-purple-700 via-black to-blue-900 text-white text-lg font-bold",
+                children: project.title
+            }, void 0, false, {
+                fileName: "[project]/src/components/ProjectCard.tsx",
+                lineNumber: 26,
+                columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                 className: "font-semibold text-lg text-white",
                 children: project.title
             }, void 0, false, {
                 fileName: "[project]/src/components/ProjectCard.tsx",
-                lineNumber: 26,
+                lineNumber: 30,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                className: "text-sm text-slate-300 mt-1",
-                children: project.short
+                className: "text-sm text-slate-300/80 mt-1",
+                children: project.description
             }, void 0, false, {
                 fileName: "[project]/src/components/ProjectCard.tsx",
-                lineNumber: 27,
+                lineNumber: 31,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "mt-3 flex gap-3",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                    project.demo && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                         href: project.demo,
                         target: "_blank",
-                        className: "text-cyan-400 hover:underline",
-                        children: "Live"
+                        className: "text-sm text-blue-400 hover:underline",
+                        children: "Live Demo"
                     }, void 0, false, {
                         fileName: "[project]/src/components/ProjectCard.tsx",
-                        lineNumber: 29,
-                        columnNumber: 9
+                        lineNumber: 34,
+                        columnNumber: 11
                     }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                    project.github && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                         href: project.github,
                         target: "_blank",
-                        className: "text-cyan-400 hover:underline",
-                        children: "Code"
+                        className: "text-sm text-green-400 hover:underline",
+                        children: "GitHub"
                     }, void 0, false, {
                         fileName: "[project]/src/components/ProjectCard.tsx",
-                        lineNumber: 30,
-                        columnNumber: 9
+                        lineNumber: 43,
+                        columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/ProjectCard.tsx",
-                lineNumber: 28,
+                lineNumber: 32,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/ProjectCard.tsx",
-        lineNumber: 17,
+        lineNumber: 15,
         columnNumber: 5
     }, this);
 }
