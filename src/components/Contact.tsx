@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import NavBar from "@/components/NavBar";
 
-export default function ContactPage() {
+export default function Contact() {
   const [status, setStatus] = useState("");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -34,7 +34,7 @@ export default function ContactPage() {
   return (
     <>
       <NavBar />
-    <div className="min-h-screen flex flex-col items-center justify-center bg-background px-6">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-background px-6 mt-10">
       {/* Title */}
       <motion.h1
         initial={{ opacity: 0, y: -20 }}
