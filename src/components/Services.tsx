@@ -31,7 +31,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="min-h-screen pt-24 px-6 py-16 bg-gradient-to-br from-black via-gray-900 to-black text-white">
+    <section id="services" className="min-h-screen pt-24 px-6 py-16 bg-gray-100 dark:bg-gradient-to-br from-black via-gray-900 to-black text-white">
       <div className="max-w-5xl mx-auto">
         <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">
           My Services

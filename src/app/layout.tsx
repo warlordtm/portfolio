@@ -24,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <Head>
         <title>Godwin — Fullstack Web Developer (React & Next.js)</title>
         <meta name="description" content="ZenCode — silent coding with modern React & Next.js projects. Hire me for landing pages, SaaS UIs and animations." />

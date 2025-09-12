@@ -23,12 +23,12 @@ export default function ProjectCard({ project }: { project: Project }) {
           className="rounded-md mb-3 w-full object-cover h-44"
         />
       ) : (
-        <div className="h-44 rounded-md mb-3 w-full flex items-center justify-center bg-gradient-to-br from-purple-700 via-black to-blue-900 text-white text-lg font-bold">
+        <div className="h-44 rounded-md mb-3 w-full flex items-center justify-center bg-gradient-to-br from-purple-700 via-black to-blue-900 text-black dark:text-white text-lg font-bold">
           {project.title}
         </div>
       )}
-      <h3 className="font-semibold text-lg text-white">{project.title}</h3>
-      <p className="text-sm text-slate-300/80 mt-1">{project.description}</p>
+      <h3 className=" text-black font-semibold text-lg dark:text-white">{project.title}</h3>
+      <p className="text-sm text-slate-500 dark:text-slate-300/80 mt-1">{project.description}</p>
       <div className="mt-3 flex gap-3">
         {project.demo && (
           <a

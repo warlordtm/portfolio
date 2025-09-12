@@ -15,7 +15,7 @@ export default function DarkMode() {
   return (
     <button
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="p-2 rounded-full bg-gray-200 dark:bg-gray-800 transition"
+      className="p-2 cursor-pointer rounded-full bg-gray-200 dark:bg-gray-800 transition"
       aria-label="Toggle Dark Mode"
     >
       {theme === "dark" ? (
