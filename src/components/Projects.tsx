@@ -17,7 +17,7 @@ export const projects = [
     description:
       "Frontend Mentor challenge — a responsive QR code generator built with React and Tailwind.",
     image: "/projects/qrcode.png",
-    demo: "https://qrcode-demo.vercel.app",
+    demo: "https://qr-code-component-xi-steel.vercel.app/",
     github: "https://github.com/warlordtm/qr-code-component",
   },
   {
@@ -27,14 +27,6 @@ export const projects = [
     image: "/projects/moviefinder.png",
     demo: "https://warlordtm.github.io/moviefinder/",
     github: "https://github.com/warlordtm/moviefinder",
-  },
-  {
-    title: "2FA Auth System",
-    description:
-      "A two-factor authentication demo built with Next.js, focusing on secure login flows.",
-    image: "/projects/2fa.png",
-    demo: "https://2fa-demo.vercel.app",
-    github: "https://github.com/warlordtm/authflow",
   },
 ];
 
