@@ -5,7 +5,7 @@ export const blogs = [
     date: "2025-09-10",
     description:
       "I built SecurePass to learn password management, local storage, and secure design principles. Here’s the journey.",
-    image: "/blogs/securepass.png",
+    image: "/securepass.png",
     youtube: "https://www.youtube.com/embed/your-securepass-video-id",
   },
   {
@@ -14,7 +14,7 @@ export const blogs = [
     date: "2025-09-05",
     description:
       "A Frontend Mentor challenge where I built a QR Code generator in React and Tailwind CSS.",
-    image: "/blogs/qrcode.png",
+    image: "/qrcode.png",
     youtube: "https://www.youtube.com/embed/your-qrcode-video-id",
   },
   {
@@ -23,7 +23,7 @@ export const blogs = [
     date: "2025-09-01",
     description:
       "MovieFinder taught me how to work with APIs, handle pagination, modals, and manage localStorage favorites.",
-    image: "/blogs/moviefinder.png",
+    image: "/moviefinder.png",
     youtube: "https://www.youtube.com/embed/your-moviefinder-video-id",
   },
 ];

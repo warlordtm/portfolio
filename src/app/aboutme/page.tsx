@@ -1,12 +1,16 @@
 "use client";
 import NavBar from "@/components/NavBar";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function About() {
   return (
     <>
-      <NavBar/>
-      <section id="about" className="mt-20 min-h-screen pt-24 px-6 bg-white dark:bg-gray-900">
+      <NavBar />
+      <section
+        id="about"
+        className="mt-20 min-h-screen pt-24 px-6 bg-white dark:bg-gray-900"
+      >
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -14,6 +18,25 @@ export default function About() {
           viewport={{ once: true }}
           className="max-w-4xl mx-auto text-center"
         >
+          {/* Profile Picture */}
+          <div className="flex justify-center mb-8">
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              className="rounded-full overflow-hidden shadow-lg shadow-cyan-500/30 border-4 border-cyan-500/20 w-48 h-48 sm:w-56 sm:h-56 md:w-78 md:h-78"
+            >
+              <Image
+                src="/fullstack web deveoper.jpeg" 
+                alt="Godwin Bamisaye"
+                width={256}
+                height={256}
+                className="object-cover w-full h-full"
+              />
+            </motion.div>
+          </div>
+
+          {/* About Content */}
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
             About Me
           </h2>

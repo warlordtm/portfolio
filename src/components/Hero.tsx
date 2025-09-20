@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section className="relative flex flex-col items-center justify-center text-center min-h-screen px-6">
       {/* Profile Picture with Animated Border */}
-      <div className="relative mb-8 w-32 h-32 sm:w-40 sm:h-40 md:w-56 md:h-56 lg:w-64 lg:h-64">
+      <div className="relative mb-8 w-32 h-32 sm:w-40 sm:h-40 md:w-76 md:h-76 lg:w-84 lg:h-84">
         <motion.div
           className="absolute inset-0 rounded-full border-4 border-cyan-400"
           animate={{

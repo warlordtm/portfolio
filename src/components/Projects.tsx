@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import ProjectCard from "./ProjectCard";
 
 export const projects = [
@@ -8,7 +7,7 @@ export const projects = [
     title: "SecurePass",
     description:
       "A modern password manager built with React. Add, edit, delete, and search passwords securely.",
-    image: "/projects/securepass.png",
+    image: "/securepass.png",
     demo: "https://securepass-two.vercel.app",
     github: "https://github.com/warlordtm/securepass",
   },
@@ -16,7 +15,7 @@ export const projects = [
     title: "QR Code Generator",
     description:
       "Frontend Mentor challenge — a responsive QR code generator built with React and Tailwind.",
-    image: "/projects/qrcode.png",
+    image: "/qrcode.png",
     demo: "https://qr-code-component-xi-steel.vercel.app/",
     github: "https://github.com/warlordtm/qr-code-component",
   },
@@ -24,7 +23,7 @@ export const projects = [
     title: "MovieFinder",
     description:
       "Movie search app using an external API. Includes pagination, favorites, error handling, and modals.",
-    image: "/projects/moviefinder.png",
+    image: "/moviefinder.png",
     demo: "https://warlordtm.github.io/moviefinder/",
     github: "https://github.com/warlordtm/moviefinder",
   },
