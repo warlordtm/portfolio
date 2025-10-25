@@ -72,7 +72,7 @@ async function POST(req) {
             from: "Portfolio Contact <onboarding@resend.dev>",
             to: "bamisayegodwin7@gmail.com",
             subject: `New message from ${name}`,
-            reply_to: email,
+            replyTo: email,
             text: `Email: ${email}\n\nMessage: ${message}`
         });
         return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json({

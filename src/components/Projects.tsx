@@ -4,6 +4,14 @@ import ProjectCard from "./ProjectCard";
 
 export const projects = [
   {
+    title: "Jamie White Consulting",
+    description:
+      "A professional landing page built for Jamie White’s consulting business. Designed to highlight his services, build trust, and convert visitors into clients with a clean, modern interface.",
+    image: "/sbggroup.png",
+    demo: "https://sbggroups.vercel.app",
+    github: "https://github.com/warlordtm/sbggroup",
+  },
+  {
     title: "SecurePass",
     description:
       "A modern password manager built with React. Add, edit, delete, and search passwords securely.",
