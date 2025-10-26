@@ -12,6 +12,14 @@ export const projects = [
     github: "https://github.com/warlordtm/sbggroup",
   },
   {
+    title: "MovieFinder",
+    description:
+      "Movie search app using an external API. Includes pagination, favorites, error handling, and modals.",
+    image: "/moviefinder.png",
+    demo: "https://warlordtm.github.io/moviefinder/",
+    github: "https://github.com/warlordtm/moviefinder",
+  },
+  {
     title: "SecurePass",
     description:
       "A modern password manager built with React. Add, edit, delete, and search passwords securely.",
@@ -26,14 +34,6 @@ export const projects = [
     image: "/qrcode.png",
     demo: "https://qr-code-component-xi-steel.vercel.app/",
     github: "https://github.com/warlordtm/qr-code-component",
-  },
-  {
-    title: "MovieFinder",
-    description:
-      "Movie search app using an external API. Includes pagination, favorites, error handling, and modals.",
-    image: "/moviefinder.png",
-    demo: "https://warlordtm.github.io/moviefinder/",
-    github: "https://github.com/warlordtm/moviefinder",
   },
 ];
 
