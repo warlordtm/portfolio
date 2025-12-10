@@ -27,7 +27,7 @@ export default function About() {
               className="rounded-full overflow-hidden shadow-lg shadow-cyan-500/30 border-4 border-cyan-500/20 w-48 h-48 sm:w-56 sm:h-56 md:w-78 md:h-78"
             >
               <Image
-                src="/fullstack web deveoper.jpeg" 
+                src="/deveoper.png" 
                 alt="Godwin Bamisaye"
                 width={256}
                 height={256}
