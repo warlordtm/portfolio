@@ -23,7 +23,7 @@ export default function Hero() {
           }}
         />
         <Image
-          src="/fullstack web deveoper.jpeg"
+          src="/developer.jpeg"
           alt="Profile Picture"
           fill
           className="rounded-full object-cover relative z-10"
