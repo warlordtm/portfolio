@@ -23,7 +23,7 @@ export default function Hero() {
           }}
         />
         <Image
-          src="/developer.jpeg"
+          src="/developer.png"
           alt="Profile Picture"
           fill
           className="rounded-full object-cover relative z-10"
@@ -46,7 +46,7 @@ export default function Hero() {
         transition={{ duration: 0.8, delay: 0.2 }}
         className="text-base sm:text-lg text-slate-600 max-w-xl sm:max-w-2xl dark:text-gray-400"
       >
-        Full-stack developer in the making — building modern web apps with Next.js,
+        Full-stack developer in the making, building modern web apps with Next.js,
         React, and secure design principles.
       </motion.p>
     </section>
