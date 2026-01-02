@@ -4,7 +4,7 @@ import ProjectCard from "./ProjectCard";
 
 export const projects = [
   {
-    title: "Mayor's Deck Ventures Car Stand",
+    title: "CojaMotors",
     description:
       "A car stand venture project showcasing Mayor's Deck Ventures with an interactive demo.",
     image: "/carstand.png",
