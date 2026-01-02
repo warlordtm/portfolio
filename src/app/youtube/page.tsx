@@ -134,7 +134,7 @@ export default function YouTubePage() {
 
         {filteredVideos.length === 0 && searchTerm && (
           <div className="text-center py-12">
-            <p className="text-gray-500 dark:text-gray-400">No videos found matching "{searchTerm}"</p>
+            <p className="text-gray-500 dark:text-gray-400">No videos found matching &quot;{searchTerm}&quot;</p>
           </div>
         )}
       </div>
