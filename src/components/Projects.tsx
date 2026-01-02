@@ -4,6 +4,14 @@ import ProjectCard from "./ProjectCard";
 
 export const projects = [
   {
+    title: "Mayor's Deck Ventures Car Stand",
+    description:
+      "A car stand venture project showcasing Mayor's Deck Ventures with an interactive demo.",
+    image: "/carstand.png",
+    demo: "https://cojamotors.vercel.app",
+    github: "https://github.com/warlordtm/mayors_deck_ventures_car_stand",
+  },
+  {
     title: "Jamie White Consulting",
     description:
       "A professional landing page built for Jamie White’s consulting business. Designed to highlight his services, build trust, and convert visitors into clients with a clean, modern interface.",
@@ -26,14 +34,6 @@ export const projects = [
     image: "/securepass.png",
     demo: "https://securepass-two.vercel.app",
     github: "https://github.com/warlordtm/securepass",
-  },
-  {
-    title: "QR Code Generator",
-    description:
-      "Frontend Mentor challenge — a responsive QR code generator built with React and Tailwind.",
-    image: "/qrcode.png",
-    demo: "https://qr-code-component-xi-steel.vercel.app/",
-    github: "https://github.com/warlordtm/qr-code-component",
   },
 ];
 
