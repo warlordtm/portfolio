@@ -111,7 +111,9 @@ export default function YouTubePage() {
                       <FaYoutube />
                       Watch
                     </a>
-                    {expandedVideos.has(index) ? <FaChevronUp className="text-gray-400" /> : <FaChevronDown className="text-gray-400" />}
+                    <div className="cursor-pointer">
+                      {expandedVideos.has(index) ? <FaChevronUp className="text-gray-400" /> : <FaChevronDown className="text-gray-400" />}
+                    </div>
                   </div>
                 </div>
               </button>
