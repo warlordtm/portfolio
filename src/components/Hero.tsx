@@ -46,7 +46,7 @@ export default function Hero() {
         transition={{ duration: 0.8, delay: 0.2 }}
         className="text-base sm:text-lg text-gray-600 max-w-xl sm:max-w-2xl dark:text-gray-400"
       >
-        Full-stack Developer, Building Modern, Secure and Scalable Web Apps with Next.js using Secure Design Principles.
+        Full-stack Developer, Building Modern, Secure and Scalable Web Apps with Next.js using Secure Design Principles. I&apos;m determined to turn your ideas into reality.
       </motion.p>
     </section>
   );
