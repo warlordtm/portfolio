@@ -89,7 +89,7 @@ export default function YouTubePage() {
               {/* Video Header */}
               <button
                 onClick={() => toggleVideo(index)}
-                className="w-full p-6 text-left hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200"
+                className="w-full p-6 text-left hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200 cursor-pointer"
               >
                 <div className="flex items-center justify-between">
                   <div className="flex-1">
