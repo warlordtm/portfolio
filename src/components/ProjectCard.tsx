@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 type Project = {
   title: string;
@@ -18,9 +19,11 @@ export default function ProjectCard({ project }: { project: Project }) {
       className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-200 dark:border-gray-700"
     >
       {project.image ? (
-        <img
+        <Image
           src={project.image}
           alt={project.title}
+          width={400}
+          height={192}
           className="rounded-lg mb-4 w-full object-cover h-48"
         />
       ) : (

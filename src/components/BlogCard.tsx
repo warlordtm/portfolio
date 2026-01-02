@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 type Blog = {
   title: string;
@@ -18,9 +19,11 @@ export default function BlogCard({ blog }: { blog: Blog }) {
       className="glass rounded-xl p-4 shadow-neon-md"
     >
       {blog.image && (
-        <img
+        <Image
           src={blog.image}
           alt={blog.title}
+          width={400}
+          height={176}
           className="rounded-md mb-3 w-full object-cover h-44"
         />
       )}
