@@ -50,7 +50,7 @@ export default function Contact() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-gray-600 dark:text-gray-300 text-center max-w-lg mx-auto mb-12"
         >
-          Got a project in mind or just want to say hi? Fill out the form and I'll get back to you.
+          Got a project in mind or just want to say hi? Fill out the form and I&apos;ll get back to you.
         </motion.p>
 
         {/* Contact Form */}
