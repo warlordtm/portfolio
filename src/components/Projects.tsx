@@ -40,14 +40,16 @@ export const projects = [
 
 export default function Projects() {
   return (
-    <section className="py-20 bg-gradient-to-b from-blue-50 via-indigo-50 to-white glass" id="projects">
-      <h2 className="text-3xl font-bold mb-10 text-center text-black dark:text-white">
-        My Projects
-      </h2>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto px-6">
-        {projects.map((p, i) => (
-          <ProjectCard key={i} project={p} />
-        ))}
+    <section className="py-20 bg-white dark:bg-gray-900" id="projects">
+      <div className="max-w-6xl mx-auto px-6">
+        <h2 className="text-4xl font-bold mb-12 text-center text-gray-900 dark:text-white">
+          My Projects
+        </h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((p, i) => (
+            <ProjectCard key={i} project={p} />
+          ))}
+        </div>
       </div>
     </section>
   );

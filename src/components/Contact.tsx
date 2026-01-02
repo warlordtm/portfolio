@@ -32,84 +32,98 @@ export default function Contact() {
   };
 
   return (
-      <div className="bg-gray-0 min-h-screen flex flex-col items-center justify-center dark:bg-black/10 px-6 -mt-10 -mb-20">
+    <section id="contact" className="py-20 bg-gray-50 dark:bg-gray-900">
+      <div className="max-w-2xl mx-auto px-6">
         {/* Title */}
-        <motion.h1
+        <motion.h2
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-4xl md:text-5xl font-bold mb-4 text-center  text-black/90 dark:text-white dark:drop-shadow-[0_0_6px_#00f]"
+          className="text-4xl font-bold mb-4 text-center text-gray-900 dark:text-white"
         >
           Contact Me
-        </motion.h1>
+        </motion.h2>
 
         {/* Subtitle */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-slate-600 dark:text-slate-300 text-center max-w-lg mb-8"
+          className="text-gray-600 dark:text-gray-300 text-center max-w-lg mx-auto mb-12"
         >
-          Got a project in mind or just want to say hi? Fill out the form and I’ll get back to you.
+          Got a project in mind or just want to say hi? Fill out the form and I'll get back to you.
         </motion.p>
 
         {/* Contact Form */}
         <motion.form
           onSubmit={handleSubmit}
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="w-full max-w-lg p-6 rounded-xl shadow-[0_0_12px_rgba(0,255,255,0.3)] bg-black/40 backdrop-blur-md space-y-4"
+          className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 space-y-6"
         >
           <div>
-            <label className="block text-sm font-medium mb-1 text-slate-200">Name</label>
+            <label className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">Name</label>
             <input
               name="name"
               type="text"
               required
-              className="w-full p-3 rounded-lg bg-black/60 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 shadow-[0_0_6px_rgba(0,255,255,0.25)]"
+              className="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+              placeholder="Your name"
             />
           </div>
           <div>
-            <label className="block text-sm font-medium mb-1 text-slate-200">Email</label>
+            <label className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">Email</label>
             <input
               name="email"
               type="email"
               required
-              className="w-full p-3 rounded-lg bg-black/60 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 shadow-[0_0_6px_rgba(0,255,255,0.25)]"
+              className="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+              placeholder="your.email@example.com"
             />
           </div>
           <div>
-            <label className="block text-sm font-medium mb-1 text-slate-200">Message</label>
+            <label className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">Message</label>
             <textarea
               name="message"
               required
-              rows={4}
-              className="w-full p-3 rounded-lg bg-black/60 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 shadow-[0_0_6px_rgba(0,255,255,0.25)]"
+              rows={5}
+              className="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors resize-none"
+              placeholder="Tell me about your project..."
             />
           </div>
 
           {/* Submit button */}
           <motion.button
-            whileHover={{ scale: 1.03, boxShadow: "0 0 12px rgba(0,255,255,0.6)" }}
-            whileTap={{ scale: 0.95 }}
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
             type="submit"
-            className="w-full py-3 px-4 bg-cyan-500 text-black font-semibold rounded-lg dark:shadow-[0_0_10px_rgba(0,255,255,0.3)] transition"
+            disabled={status === "Sending..."}
+            className="w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-semibold rounded-lg transition-colors duration-200 shadow-sm hover:shadow-md"
           >
-            Send Message
+            {status === "Sending..." ? "Sending..." : "Send Message"}
           </motion.button>
         </motion.form>
 
         {/* Status message */}
         {status && (
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="mt-4 text-sm dark:text-cyan-300 text-cyan-900"
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            className="mt-6 text-center"
           >
-            {status}
-          </motion.p>
+            <p className={`text-sm font-medium ${
+              status.includes("✅")
+                ? "text-green-600 dark:text-green-400"
+                : status.includes("❌")
+                ? "text-red-600 dark:text-red-400"
+                : "text-blue-600 dark:text-blue-400"
+            }`}>
+              {status}
+            </p>
+          </motion.div>
         )}
       </div>
+    </section>
   );
 }

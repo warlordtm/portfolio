@@ -8,17 +8,18 @@ export default function NavBar() {
     <motion.nav
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      className="fixed w-full z-50 top-0 backdrop-blur-md bg-gray-50 dark:bg-[#020617]"
+      className="fixed w-full z-50 top-0 backdrop-blur-lg bg-white/80 dark:bg-[#020617]/80 border-b border-gray-200 dark:border-gray-800 shadow-sm"
     >
       <div className="mx-auto max-w-6xl px-6 flex items-center justify-between h-16">
-        <Link href="/" className="text-xl font-medium tracking-wide  text-gray-600 dark:text-white">
+        <Link href="/" className="text-xl font-semibold tracking-wide text-gray-900 dark:text-white hover:text-pink-500 transition-colors">
           Godwin.dev
         </Link>
 
-        <div className="flex items-center gap-6 text-gray-600 dark:text-gray-300">
-          <Link href="/" className="hover:text-pink-400">Home</Link>
-          <Link href="/aboutme" className="hover:text-pink-400">About</Link>
-          <Link href="/blogs" className="hover:text-pink-400">Blog</Link>
+        <div className="flex items-center gap-8 text-gray-700 dark:text-gray-300">
+          <Link href="/" className="hover:text-pink-500 transition-colors font-medium">Home</Link>
+          <Link href="/aboutme" className="hover:text-pink-500 transition-colors font-medium">About</Link>
+          <Link href="/#contact" className="hover:text-pink-500 transition-colors font-medium">Contact</Link>
+          <Link href="/youtube" className="hover:text-pink-500 transition-colors font-medium">YouTube</Link>
           <DarkMode />
         </div>
       </div>
