@@ -31,10 +31,9 @@ globalThis.__BUILD_MANIFEST = {
   },
   "devFiles": [],
   "ampDevFiles": [],
-  "polyfillFiles": [
-    "static/chunks/node_modules_next_dist_build_polyfills_polyfill-nomodule.js"
-  ],
+  "polyfillFiles": [],
   "lowPriorityFiles": [],
+<<<<<<< HEAD
   "rootMainFiles": [
     "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_4e3b0bdd._.js",
     "static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js",
@@ -46,6 +45,9 @@ globalThis.__BUILD_MANIFEST = {
     "static/chunks/_a0ff3932._.js",
     "static/chunks/turbopack-_3fb52da9._.js"
   ],
+=======
+  "rootMainFiles": [],
+>>>>>>> ea5e789 (Update)
   "ampFirstPages": []
 };
 globalThis.__BUILD_MANIFEST.lowPriorityFiles = [

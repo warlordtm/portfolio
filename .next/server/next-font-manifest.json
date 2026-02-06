@@ -1,1 +1,10 @@
+<<<<<<< HEAD
 {"pages":{},"app":{},"appUsingSizeAdjust":false,"pagesUsingSizeAdjust":false}
+=======
+{
+  "app": {},
+  "appUsingSizeAdjust": false,
+  "pages": {},
+  "pagesUsingSizeAdjust": false
+}
+>>>>>>> ea5e789 (Update)
