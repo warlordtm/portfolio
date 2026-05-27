@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import ScrollProgress from "@/components/ScrollProgress";
 
 export const metadata: Metadata = {
-  title: "Godwin — Fullstack Web Developer (React & Next.js)",
-  description: "ZenCode — silent coding with modern React & Next.js projects. Hire me for landing pages, SaaS UIs and animations.",
+  title: "Godwin Bamisaye - Full-stack Developer (React & Next.js)",
+  description:
+    "Godwin Bamisaye builds modern, secure and scalable web applications with React, Next.js and Node.js. Available for freelance & full-time roles.",
   openGraph: {
-    title: "Godwin - React & Next.js developer",
+    title: "Godwin Bamisaye - Full-stack Developer",
+    description:
+      "Building modern, secure and scalable web applications with React & Next.js.",
     images: "/og-image.png",
   },
 };
@@ -16,8 +20,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body>
+        <ScrollProgress />
         {children}
       </body>
     </html>

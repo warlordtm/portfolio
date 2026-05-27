@@ -1,65 +1,94 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { FaReact, FaNodeJs, FaJs, FaDatabase } from "react-icons/fa";
+import { FaReact, FaNodeJs, FaJs, FaDatabase, FaGitAlt } from "react-icons/fa";
 import {
-  SiNextdotjs,
-  SiTailwindcss,
-  SiShadcnui,
-  SiMongodb,
-  SiSupabase,
-  SiFramer,
-  SiTypescript,
-  SiFigma,
+  SiNextdotjs, SiTailwindcss, SiShadcnui, SiMongodb,
+  SiSupabase, SiFramer, SiTypescript, SiFigma, SiPostgresql,
+  SiPrisma, SiVercel,
 } from "react-icons/si";
 
-
-
-const skills = [
-  { name: "React", icon: <FaReact className="text-cyan-400" /> },
-  { name: "Next.js", icon: <SiNextdotjs className="text-black dark:text-white" /> },
-  { name: "Tailwind CSS", icon: <SiTailwindcss className="text-sky-400" /> },
-  { name: "shadcn/ui", icon: <SiShadcnui className="text-purple-400" /> },
-  { name: "MongoDB", icon: <SiMongodb className="text-green-400" /> },
-  { name: "Supabase + Clerk", icon: <SiSupabase className="text-emerald-400" /> },
-  { name: "JavaScript", icon: <FaJs className="text-yellow-400" /> },
-  { name: "TypeScript", icon: <SiTypescript className="text-blue-500 dark:text-blue-300" /> },
-  { name: "Framer Motion", icon: <SiFramer className="text-pink-400" /> },
-  { name: "Node.js", icon: <FaNodeJs className="text-green-500" /> },
-  { name: "Databases", icon: <FaDatabase className="text-blue-400" /> },
-  { name: "Figma", icon: <SiFigma className="text-purple-600 dark:text-purple-300" /> },
+const SKILLS = [
+  { name: "React",         icon: <FaReact className="text-cyan-400" />,            col: "text-cyan-400"    },
+  { name: "Next.js",       icon: <SiNextdotjs className="text-white" />,           col: "text-white"       },
+  { name: "TypeScript",    icon: <SiTypescript className="text-blue-400" />,       col: "text-blue-400"    },
+  { name: "JavaScript",    icon: <FaJs className="text-yellow-400" />,             col: "text-yellow-400"  },
+  { name: "Tailwind CSS",  icon: <SiTailwindcss className="text-sky-400" />,       col: "text-sky-400"     },
+  { name: "shadcn/ui",     icon: <SiShadcnui className="text-purple-400" />,       col: "text-purple-400"  },
+  { name: "Framer Motion", icon: <SiFramer className="text-pink-400" />,           col: "text-pink-400"    },
+  { name: "Node.js",       icon: <FaNodeJs className="text-green-500" />,          col: "text-green-500"   },
+  { name: "MongoDB",       icon: <SiMongodb className="text-green-400" />,         col: "text-green-400"   },
+  { name: "PostgreSQL",    icon: <SiPostgresql className="text-sky-500" />,        col: "text-sky-500"     },
+  { name: "Supabase",      icon: <SiSupabase className="text-emerald-400" />,      col: "text-emerald-400" },
+  { name: "Prisma",        icon: <SiPrisma className="text-slate-300" />,          col: "text-slate-300"   },
+  { name: "Databases",     icon: <FaDatabase className="text-blue-400" />,         col: "text-blue-400"    },
+  { name: "Git",           icon: <FaGitAlt className="text-orange-400" />,         col: "text-orange-400"  },
+  { name: "Vercel",        icon: <SiVercel className="text-white" />,              col: "text-white"       },
+  { name: "Figma",         icon: <SiFigma className="text-pink-500" />,            col: "text-pink-500"    },
 ];
 
-export default function Skills() {
+function SkillPill({ name, icon }: { name: string; icon: React.ReactNode }) {
   return (
-    <section className="py-16 bg-gray-50 dark:bg-gradient-to-b from-[#020617] via-[#041427] to-[#07182a] relative my-15">
-      <motion.h2
-        initial={{ opacity: 0, y: -20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-        className="text-4xl font-bold text-center text-[#020617] dark:text-white mb-10 dark:drop-shadow-[0_0_6px_#00f]"
-      >
-        My Tech Stack
-      </motion.h2>
+    <div
+      className="flex items-center gap-3 px-5 py-3 mx-3 rounded-2xl flex-shrink-0 transition-all duration-200 cursor-default select-none"
+      style={{
+        background: "rgba(255,255,255,0.04)",
+        border: "1px solid rgba(255,255,255,0.08)",
+      }}
+      onMouseEnter={(e) => {
+        (e.currentTarget as HTMLElement).style.borderColor = "rgba(139,92,246,0.4)";
+        (e.currentTarget as HTMLElement).style.background  = "rgba(139,92,246,0.08)";
+      }}
+      onMouseLeave={(e) => {
+        (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.08)";
+        (e.currentTarget as HTMLElement).style.background  = "rgba(255,255,255,0.04)";
+      }}
+    >
+      <span className="text-2xl">{icon}</span>
+      <span className="text-sm font-medium whitespace-nowrap" style={{ color: "#CBD5E1" }}>
+        {name}
+      </span>
+    </div>
+  );
+}
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 max-w-5xl mx-auto px-6">
-        {skills.map((skill, index) => (
-          <motion.div
-            key={skill.name}
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            whileHover={{ scale: 1.05, boxShadow: "0 0 12px rgba(0,255,255,0.5)" }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.4, delay: index * 0.05 }}
-            className="dark:glass rounded-xl flex flex-col items-center justify-center p-6 shadow-[0_0_6px_rgba(0,255,255,0.2)] dark:bg-black/40 backdrop-blur-md bg-gray-200"
-          >
-            <div className="text-4xl mb-3">{skill.icon}</div>
-            <p className="text-sm text-[#020617] dark:text-white font-medium">
-              {skill.name}
-            </p>
-          </motion.div>
-        ))}
+export default function Skills() {
+  const row1 = SKILLS.slice(0, 8);
+  const row2 = SKILLS.slice(8);
+
+  return (
+    <section
+      id="skills"
+      className="py-16 overflow-hidden"
+      style={{ background: "linear-gradient(180deg, #090d1f 0%, #050816 100%)" }}
+    >
+      {/* Section header */}
+      <div className="text-center mb-14 px-6">
+        <p className="text-sm font-semibold tracking-widest uppercase mb-3" style={{ color: "#8B5CF6" }}>
+          What I Work With
+        </p>
+        <h2 className="text-4xl font-bold" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+          My{" "}
+          <span className="gradient-text">Tech Stack</span>
+        </h2>
+        <div className="section-divider mt-6 max-w-xs mx-auto" />
+      </div>
+
+      {/* Row 1 - scrolls left */}
+      <div className="relative mb-4" style={{ maskImage: "linear-gradient(90deg, transparent 0%, black 10%, black 90%, transparent 100%)" }}>
+        <div className="marquee-track">
+          {[...row1, ...row1].map((skill, i) => (
+            <SkillPill key={`r1-${i}`} name={skill.name} icon={skill.icon} />
+          ))}
+        </div>
+      </div>
+
+      {/* Row 2 - scrolls right */}
+      <div className="relative" style={{ maskImage: "linear-gradient(90deg, transparent 0%, black 10%, black 90%, transparent 100%)" }}>
+        <div className="marquee-track-reverse">
+          {[...row2, ...row2].map((skill, i) => (
+            <SkillPill key={`r2-${i}`} name={skill.name} icon={skill.icon} />
+          ))}
+        </div>
       </div>
     </section>
   );

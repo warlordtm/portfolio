@@ -1,65 +1,12 @@
-"use client";
-import NavBar from "@/components/NavBar";
-import { motion } from "framer-motion";
-import Image from "next/image";
+import { Metadata } from "next";
+import AboutPage from "./AboutPage";
 
-export default function About() {
-  return (
-    <>
-      <NavBar />
-      <section
-        id="about"
-        className="mt-20 min-h-screen pt-24 px-6 bg-white dark:bg-gray-900"
-      >
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="max-w-4xl mx-auto text-center"
-        >
-          {/* Profile Picture */}
-          <div className="flex justify-center mb-8">
-            <motion.div
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.6 }}
-              className="rounded-full overflow-hidden shadow-lg shadow-cyan-500/30 border-4 border-cyan-500/20 w-48 h-48 sm:w-56 sm:h-56 md:w-78 md:h-78"
-            >
-              <Image
-                src="/developer.jpeg"
-                alt="Godwin Bamisaye"
-                width={256}
-                height={256}
-                className="object-cover w-full h-full"
-              />
-            </motion.div>
-          </div>
+export const metadata: Metadata = {
+  title: "About - Godwin Bamisaye",
+  description:
+    "Learn more about Godwin Bamisaye, a full-stack developer - building modern, secure and scalable web applications.",
+};
 
-          {/* About Content */}
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
-            About Me
-          </h2>
-          <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-            I’m passionate about building web applications that are not only functional,
-            but also secure, scalable, and reliable. My focus is on authentication,
-            authorization, and secure design principles, the foundations of trustworthy
-            software.
-          </p>
-          <p className="mt-4 text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-            For me, security goes beyond writing code. It’s about asking the right
-            questions, anticipating risks, and applying discipline to build systems the
-            right way, even when shortcuts are tempting.
-          </p>
-          <p className="mt-4 text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-            I approach projects with a balance of creativity and precision, starting
-            small, iterating quickly, and staying curious enough to explore what I don’t
-            know yet. This mindset allows me to confidently tackle everything from
-            elegant front-end interfaces to complex full-stack applications that can
-            scale and stand up to real-world demands.
-          </p>
-        </motion.div>
-      </section>
-    </>
-  );
+export default function Page() {
+  return <AboutPage />;
 }
