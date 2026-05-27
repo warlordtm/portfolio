@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
-import { Mail, MapPin, Send } from "lucide-react";
+import { Mail, Send } from "lucide-react";
 
 const SOCIAL = [
   { icon: FaGithub,   href: "https://github.com/warlordtm",            label: "GitHub",   color: "#94A3B8" },

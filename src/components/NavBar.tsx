@@ -73,13 +73,13 @@ export default function NavBar() {
             ))}
 
             {/* Hire Me CTA */}
-            <a
+            <Link
               href="/#contact"
               id="hire-me-btn"
               className="ml-4 px-5 py-2 btn-primary text-sm rounded-xl"
             >
               <span>Hire Me</span>
-            </a>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -116,13 +116,13 @@ export default function NavBar() {
                   {link.label}
                 </Link>
               ))}
-              <a
+              <Link
                 href="/#contact"
                 onClick={() => setMobileOpen(false)}
                 className="mt-2 px-5 py-3 btn-primary text-sm rounded-xl text-center"
               >
                 <span>Hire Me</span>
-              </a>
+              </Link>
             </div>
           </motion.div>
         )}

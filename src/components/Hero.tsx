@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
@@ -112,14 +113,14 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.65 }}
           className="flex flex-col sm:flex-row gap-4 mb-10"
         >
-          <a
+          <Link
             href="/#projects"
             id="view-work-btn"
             className="btn-primary px-8 py-3 flex items-center justify-center gap-2 text-base"
           >
             <span>View My Work</span>
             <ExternalLink size={16} />
-          </a>
+          </Link>
           <a
             href="https://linkedin.com/in/bamisaye-godwin"
             target="_blank"
